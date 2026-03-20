@@ -3,7 +3,7 @@ name: ci-cd
 on:
   pull_request:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 permissions:
   id-token: write
@@ -76,5 +76,5 @@ jobs:
 
       - name: Smoke Test
         run: |
-          curl -fsS https://api.mayurnaikwade.com/health
-          curl -fsS https://api.mayurnaikwade.com/predict
+          curl -fsS https://api.tejas-electricals.in/health
+          curl -fsS https://api.tejas-electricals.in/predict
