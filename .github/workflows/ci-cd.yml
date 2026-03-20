@@ -28,7 +28,7 @@ jobs:
         run: pytest -q
 
   cd:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/master'
     needs: ci
     runs-on: ubuntu-latest
 
