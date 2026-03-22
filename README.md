@@ -35,7 +35,7 @@ Example response:
 
 ### Components
 
-- **Route53** – DNS for `api.mayurnaikwade.com`
+- **Route53** – DNS for `api.tejas-electricals.in`
 - **Application Load Balancer (ALB)** – TLS termination and traffic routing
 - **AWS Certificate Manager (ACM)** – HTTPS certificates
 - **ECS Fargate** – Serverless container orchestration
@@ -48,7 +48,7 @@ Example response:
 
 ### Traffic Flow
 
-1. Client sends an HTTPS request to `https://api.mayurnaikwade.com`
+1. Client sends an HTTPS request to `https://api.tejas-electricals.in`
 2. Route53 resolves the domain to the Application Load Balancer
 3. ALB enforces HTTPS and forwards traffic to the ECS target group
 4. ECS Fargate tasks run the containerized API in private subnets
@@ -61,7 +61,7 @@ Example response:
 
 ```mermaid
 flowchart LR
-  U[User] -->|HTTPS| R53[Route53 api.mayurnaikwade.com]
+  U[User] -->|HTTPS| R53[Route53 api.tejas-electricals.in]
   R53 --> ALB[ALB :443 TLS]
   ALB --> TG[Target Group /health]
   TG --> ECS[ECS Fargate Service]
@@ -216,7 +216,7 @@ Trust policy (repo + branch locked):
           "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
         },
         "StringLike": {
-          "token.actions.githubusercontent.com:sub": "repo:MayurNaikwade/ProjectP:ref:refs/heads/main"
+          "token.actions.githubusercontent.com:sub": "repo:Tejas1409/ProjectP:ref:refs/heads/main"
         }
       }
     }
